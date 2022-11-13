@@ -3,12 +3,12 @@ class Person {
     name;
     age;
     weight;
-    feet;
-    constructor(name, age, weight, feet) {
+    height;
+    constructor(name, age, weight, height) {
         this.name= name;
         this.age = age;
         this.weight = weight;
-        this.feet = feet;
+        this.height = height;
 
 
     }
@@ -18,7 +18,7 @@ class Person {
     }
   
     info() {
-        return "You are belongs to Person and your gender is not defined";
+        return "Class belongs to Person and your gender is not defined";
     }
 
 
@@ -33,14 +33,14 @@ console.log(personObj.info());
 
 class Men extends Person {
     gender;
-    constructor(name, age, weight, feet, gender) {
-        super(name, age, weight, feet);
+    constructor(name, age, weight, height, gender) {
+        super(name, age, weight, height);
         this.gender = gender;
 
     }
     //method Overriden
     info() {
-        return "You are belongs to Men and your gender is "+this.gender;
+        return "class  belongs to Men and your gender is "+this.gender;
     }
     nameDisplay() {
         return "Men class: Your name is " + this.name;
@@ -59,8 +59,8 @@ console.log("Men Age = " + menAge);
 console.log(menObj.info());
 class Women extends Person {
     gender;
-    constructor(name, age, weight, feet, gender) {
-        super(name, age, weight, feet);
+    constructor(name, age, weight, height, gender) {
+        super(name, age, weight, height);
         this.gender = gender;
 
     }
